@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>AutoJoin</key>
+			<true/>
+			<key>CaptiveBypass</key>
+			<false/>
+			<key>DisableAssociationMACRandomization</key>
+			<false/>
+			<key>EncryptionType</key>
+			<string>WPA2</string>
+			<key>HIDDEN_NETWORK</key>
+			<false/>
+			<key>IsHotspot</key>
+			<false/>
+			<key>Password</key>
+			<string>93773988841472253124</string>
+			<key>PayloadDescription</key>
+			<string>Konfiguriert WLAN-Einstellungen</string>
+			<key>PayloadDisplayName</key>
+			<string>WLAN</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.wifi.managed.7DFE9539-8683-4FF8-B5E7-AF29E085EDCE</string>
+			<key>PayloadType</key>
+			<string>com.apple.wifi.managed</string>
+			<key>PayloadUUID</key>
+			<string>7DFE9539-8683-4FF8-B5E7-AF29E085EDCE</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>ProxyType</key>
+			<string>None</string>
+			<key>SSID_STR</key>
+			<string>FRITZ!Box 7590 TV</string>
+		</dict>
+	</array>
+	<key>PayloadDisplayName</key>
+	<string>wlan </string>
+	<key>PayloadIdentifier</key>
+	<string>Mac-mini-2.02971E9D-1F54-42D3-961F-5C392C4E53EC</string>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>083908B3-CF25-4B8A-8FD9-6A8F34F37A99</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>
