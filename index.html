@@ -5,18 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>WLAN Zugang</title>
 </head>
-<body style="text-align:center; font-family:sans-serif; padding-top:40px; background:#ffffff;">
-  <h2>WLAN verbinden</h2>
-  <p>Halte deinen Finger 1 Sekunde lang auf den QR-Code gedrückt:</p>
+<body style="text-align:center; font-family:-apple-system, sans-serif; padding:30px 20px; background:#f5f5f7;">
   
-  <img id="qr" style="width:260px; height:260px; padding:15px; border:1px solid #ddd; border-radius:12px;">
+  <div style="background:white; padding:25px; border-radius:18px; max-width:340px; margin:0 auto; box-shadow:0 4px 12px rgba(0,0,0,0.08);">
+    <h2 style="margin-top:0;">WLAN verbinden</h2>
+    <p style="color:#555; font-size:15px;">Netzwerk: <b id="ssidText"></b></p>
+
+    <!-- Button 1: Passwort direkt kopieren (Klappt in Chrome & Safari sofort) -->
+    <button onclick="copyPass()" id="copyBtn" style="width:100%; background:#007aff; color:white; border:none; padding:14px; font-size:16px; font-weight:bold; border-radius:12px; cursor:pointer; margin-bottom:12px;">
+      📋 WLAN-Passwort kopieren
+    </button>
+
+    <!-- Button 2: Automatisches Profil (Falls wlan.mobileconfig im selben GitHub-Ordner liegt) -->
+    <a href="wlan.mobileconfig" style="display:block; background:#e5e5ea; color:#007aff; text-decoration:none; padding:12px; font-size:15px; font-weight:600; border-radius:12px; margin-bottom:20px;">
+      ⚙️ Automatisch einrichten (iOS Profil)
+    </a>
+
+    <hr style="border:none; border-top:1px solid #eee; margin:20px 0;">
+
+    <p style="color:#666; font-size:13px;">Oder in <b>Safari</b> Finger auf den Code gedrückt halten:</p>
+    <img id="qr" style="width:200px; height:200px; padding:10px; border:1px solid #eee; border-radius:12px;">
+  </div>
 
   <script>
-    const ssid = "FRITZ1Box 7590 TV";
+    // HIER DEINE DATEN EINTRAGEN:
+    const ssid = "FRITZ!Box 7590 TV";
     const pass = "93773988841472253124";
     
+    document.getElementById("ssidText").innerText = ssid;
     const wifiString = "WIFI:S:" + ssid + ";T:WPA;P:" + pass + ";;";
     document.getElementById("qr").src = "https://api.qrserver.com/v1/create-qr-code/?size=400x400&margin=20&data=" + encodeURIComponent(wifiString);
+
+    function copyPass() {
+      navigator.clipboard.writeText(pass);
+      const btn = document.getElementById("copyBtn");
+      btn.innerText = "✅ Passwort kopiert!";
+      btn.style.background = "#34c759";
+    }
   </script>
 </body>
 </html>
