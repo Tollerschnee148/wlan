@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WLAN Zugang</title>
+</head>
+<body style="text-align:center; font-family:sans-serif; padding-top:40px; background:#ffffff;">
+  <h2>WLAN verbinden</h2>
+  <p>Halte deinen Finger 1 Sekunde lang auf den QR-Code gedrückt:</p>
+  
+  <img id="qr" style="width:260px; height:260px; padding:15px; border:1px solid #ddd; border-radius:12px;">
+
+  <script>
+    const ssid = "FRITZ1Box 7590 TV";
+    const pass = "93773988841472253124";
+    
+    const wifiString = "WIFI:S:" + ssid + ";T:WPA;P:" + pass + ";;";
+    document.getElementById("qr").src = "https://api.qrserver.com/v1/create-qr-code/?size=400x400&margin=20&data=" + encodeURIComponent(wifiString);
+  </script>
+</body>
+</html>
